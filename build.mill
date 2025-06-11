@@ -1,0 +1,37 @@
+package build
+
+import mill._, scalalib._, publish._
+
+val crossScalaVersions = Seq("2.13.16", "3.7.1")
+object consolebox extends Cross[ConsoleBoxModule](crossScalaVersions)
+
+trait ConsoleBoxModule extends ScalaModule with  Cross.Module[String] with SonatypeCentralPublishModule {
+  def scalaVersion = crossValue
+  def organization = "com.w47s0n"
+  def artifactId = "consolebox"
+  def version = "0.1.1"
+  def publishVersion = version
+
+  def pomSettings = PomSettings(
+    "A simple terminal box/logging utility for Scala.",
+    "com.w47s0n",
+    "https://github.com/w47s0n/consolebox",
+    Seq(License.MIT),
+    VersionControl(
+      Some("https://github.com/w47s0n/consolebox"),
+      Some("scm:git:git@github.com:w47s0n/consolebox.git")
+    ),
+    Seq(Developer(
+      "w47s0n",
+      "Watson Dinh",
+      "ping@w47s0n.com"
+    )),
+    "jar"
+  )
+
+  object test extends ScalaTests with TestModule.ScalaTest {
+    def ivyDeps = Agg(
+      ivy"org.scalatest::scalatest:3.2.18"
+    )
+  }
+} 
