@@ -6,17 +6,17 @@ A simple terminal box/logging utility for Scala.
 
 **sbt:**
 ```scala
-libraryDependencies += "com.w47s0n" %% "consolebox" % "0.1.1"
+libraryDependencies += "com.w47s0n" %% "consolebox" % "0.1.2"
 ```
 
 **mill:**
 ```scala
 def ivyDeps = Agg(
-  ivy"com.w47s0n::consolebox:0.1.1"
+  ivy"com.w47s0n::consolebox:0.1.2"
 )
 ```
 
-Cross-built for Scala 2.13 & 3.
+Cross-built for Scala 2.12.x, 2.13 & 3.x
 
 ## Usage
 
