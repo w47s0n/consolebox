@@ -33,4 +33,4 @@ println(ConsoleBox.print("Multi-line\nsupported.", Info))
 
 ## License
 
-Apache 2.0 
+MIT
