@@ -2,14 +2,14 @@ package build
 
 import mill._, scalalib._, publish._
 
-val crossScalaVersions = Seq("2.13.16", "3.7.1")
+val crossScalaVersions = Seq("2.12.20", "2.13.16", "3.7.1")
 object consolebox extends Cross[ConsoleBoxModule](crossScalaVersions)
 
 trait ConsoleBoxModule extends ScalaModule with  Cross.Module[String] with SonatypeCentralPublishModule {
   def scalaVersion = crossValue
   def organization = "com.w47s0n"
-  def artifactId = "consolebox"
-  def version = "0.1.1"
+  def artifactName = "consolebox"
+  def version = "0.1.5"
   def publishVersion = version
 
   def pomSettings = PomSettings(

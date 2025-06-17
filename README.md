@@ -1,15 +1,18 @@
 # ConsoleBox
 
 A simple terminal box/logging utility for Scala.
+![screenshot](./docs/playground-sc.png)
 
 ## Install
 
 **sbt:**
+
 ```scala
 libraryDependencies += "com.w47s0n" %% "consolebox" % "0.1.2"
 ```
 
 **mill:**
+
 ```scala
 def ivyDeps = Agg(
   ivy"com.w47s0n::consolebox:0.1.2"

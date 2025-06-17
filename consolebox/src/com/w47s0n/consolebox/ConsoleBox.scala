@@ -1,9 +1,13 @@
-package com.w47s0n
+package com.w47s0n.consolebox
 
 object ConsoleBox {
 
-  enum LogLevel {
-    case Info, Warning, Error, Success
+  sealed trait LogLevel
+  object LogLevel {
+    case object Info extends LogLevel
+    case object Warning extends LogLevel
+    case object Error extends LogLevel
+    case object Success extends LogLevel
   }
   import LogLevel._
 
