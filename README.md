@@ -8,15 +8,29 @@ A simple terminal box/logging utility for Scala.
 **sbt:**
 
 ```scala
-libraryDependencies += "com.w47s0n" %% "consolebox" % "0.1.2"
+libraryDependencies += "com.w47s0n" %% "consolebox" % "0.2.0"
 ```
 
 **mill:**
 
 ```scala
 def ivyDeps = Agg(
-  ivy"com.w47s0n::consolebox:0.1.2"
+  ivy"com.w47s0n::consolebox:0.2.0"
 )
+```
+
+**Scala-cli**:
+
+```scala
+//> using dep com.w47s0n::consolebox:0.2.0
+//> using scala 3.7.1
+import com.w47s0n.consolebox.Consolebox
+
+Consolebox.info("hello, world!")
+Consolebox.warning("this is a warning.")
+Consolebox.error("an error occurred.")
+Consolebox.success("success!")
+Consolebox.info("Multi-line\nsupported.")
 ```
 
 Cross-built for Scala 2.12.x, 2.13 & 3.x
@@ -24,14 +38,13 @@ Cross-built for Scala 2.12.x, 2.13 & 3.x
 ## Usage
 
 ```scala
-import com.w47s0n.ConsoleBox
-import com.w47s0n.ConsoleBox.LogLevel._
+import com.w47s0n.consolebox.Consolebox
 
-println(ConsoleBox.print("Hello, World!", Info))
-println(ConsoleBox.print("This is a warning.", Warning))
-println(ConsoleBox.print("An error occurred.", Error))
-println(ConsoleBox.print("Success!", Success))
-println(ConsoleBox.print("Multi-line\nsupported.", Info))
+Consolebox.info("hello, world!")
+Consolebox.warning("this is a warning.")
+Consolebox.error("an error occurred.")
+Consolebox.success("success!")
+Consolebox.info("Multi-line\nsupported.")
 ```
 
 ## License

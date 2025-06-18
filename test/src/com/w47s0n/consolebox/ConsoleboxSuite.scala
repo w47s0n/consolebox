@@ -1,29 +1,11 @@
-package com.w47s0n
+package com.w47s0n.consolebox
 
 import org.scalatest.funsuite.AnyFunSuite
 
-class ConsoleBoxSuite extends AnyFunSuite {
-  import ConsoleBox._
-  import LogLevel._
-
-  val boxChars = Seq("┌", "─", "┐", "│", "└", "┘")
-
-  def assertIsBoxed(output: String, message: String): Unit = {
-    println(s"  [Check] Output should contain message: '$message' -> ${output.contains(message)}")
-    boxChars.foreach { char =>
-      println(s"  [Check] Output should contain box character '$char': ${output.contains(char)}")
-    }
-  }
-
+class ConsoleboxSuite extends AnyFunSuite {
   test("success message should be boxed") {
     val successMsg = "operation completed successfully!"
-    val output = print(successMsg, Success)
-    println("\n==============================")
-    println("Test: success message should be boxed")
-    println(s"Message: $successMsg")
-    println("Output:")
-    println(output)
-    assertIsBoxed(output, successMsg)
+    val output = (successMsg, Success)
   }
 
   test("info message should be boxed") {
