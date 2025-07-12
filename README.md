@@ -8,21 +8,21 @@ A simple terminal box/logging utility for Scala.
 **sbt:**
 
 ```scala
-libraryDependencies += "com.w47s0n" %% "consolebox" % "0.2.0"
+libraryDependencies += "com.w47s0n" %% "consolebox" % "0.2.1"
 ```
 
 **mill:**
 
 ```scala
 def ivyDeps = Agg(
-  ivy"com.w47s0n::consolebox:0.2.0"
+  ivy"com.w47s0n::consolebox:0.2.1"
 )
 ```
 
 **Scala-cli**:
 
 ```scala
-//> using dep com.w47s0n::consolebox:0.2.0
+//> using dep com.w47s0n::consolebox:0.2.1
 //> using scala 3.7.1
 import com.w47s0n.consolebox.Consolebox
 

@@ -9,7 +9,7 @@ trait ConsoleBoxModule extends ScalaModule with  Cross.Module[String] with Sonat
   def scalaVersion = crossValue
   def organization = "com.w47s0n"
   def artifactName = "consolebox"
-  def version = "0.2.0"
+  def version = "0.2.1"
   def publishVersion = version
 
   def pomSettings = PomSettings(
